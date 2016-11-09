@@ -8,8 +8,11 @@
   $('.projects').hide();
    });
     $('.projects-button').on('click', function() {
-  $('.projects').toggle();
-      $('.projects-button').toggleClass('active');
+  //$(this).next().toggle();for now
+      $(this).next().slideToggle(400);
+      $(this).toggleClass('active');
+      $(this).text('Projects Viewed');
+      
    });
  };
 $(document).ready(main);
